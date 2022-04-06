@@ -1,29 +1,19 @@
 
 /* IMPORT */
 
-import {EXT_SHORT, EXT_FULL} from './consts';
+import Database from './database';
 
-/* EXT 2 MIME */
+/* MAIN */
 
-function ext2mime ( ext: string ): string {
+const ext2mime = ( ext: string ): string => {
 
   ext = ext.trim ().toLowerCase ().replace ( /^\.+/, '' );
 
-  for ( let i = 0, l = EXT_SHORT.length; i < l; i++ ) {
+  if ( !Database.hasOwnProperty ( ext ) ) return '';
 
-    if ( EXT_SHORT[i][1].has ( ext ) ) return `${EXT_SHORT[i][0]}/${ext}`;
+  return Database[ext];
 
-  }
-
-  for ( let i = 0, l = EXT_FULL.length; i < l; i++ ) {
-
-    if ( EXT_FULL[i][1][ext] ) return `${EXT_FULL[i][0]}/${EXT_FULL[i][1][ext]}`;
-
-  }
-
-  return '';
-
-}
+};
 
 /* EXPORT */
 
