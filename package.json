@@ -3,7 +3,7 @@
   "repository": "github:fabiospampinato/ext2mime",
   "description": "Convert a file extension to a mime type. It works only with popular file extensions and it's super lightweight.",
   "license": "MIT",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
