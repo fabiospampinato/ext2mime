@@ -7,13 +7,15 @@ This is basically the inverse of [`mime2ext`](https://github.com/fabiospampinato
 ## Install
 
 ```sh
-npm install --save ext2mime
+npm install ext2mime
 ```
 
 ## Usage
 
 ```ts
 import ext2mime from 'ext2mime';
+
+// Let's convert some file extensions to mime types
 
 ext2mime ( 'mp3' ); // => 'audio/mpeg'
 ext2mime ( '.mp3' ); // => 'audio/mpeg'
